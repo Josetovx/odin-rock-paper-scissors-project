@@ -40,6 +40,8 @@ let computerScore=0
 
 /* Create a function to play a single round and
 increment the round winner's score */
-funcion playRound(humanChoice, computerChoice) {
-    
+function playRound(humanChoice, computerChoice) {
+    if (humanChoice===computerChoice) {
+        console.log("Draw! Try again.")
+    } 
 }
