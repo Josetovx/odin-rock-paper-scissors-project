@@ -1,4 +1,4 @@
-console.log("Hello Odin World!")
+console.log("Hello Odin World! Let's play!")
 
 /* Create a function to get the computer choice.
 Computer choice will have the same probability to 
@@ -35,13 +35,38 @@ function getHumanChoice() {
 
 /* Create two new variables for the score,
 in order to keep track of the players score */
-let humanScrore=0
-let computerScore=0
+let humanScore=0;
+let computerScore=0;
 
-/* Create a function to play a single round and
-increment the round winner's score */
+/* Create a function to play a single round, with
+all possible results, and increment the round winner's score */
 function playRound(humanChoice, computerChoice) {
     if (humanChoice===computerChoice) {
-        console.log("Draw! Try again.")
-    } 
+        console.log("Draw! Try again for a new game.");
+    } else if (humanChoice==="rock" && computerChoice==="paper") {
+        console.log("Computer wins :-o");
+        computerScore++;
+    } else if (humanChoice==="rock" && computerChoice==="scissors"){
+        console.log("Congratulations! You win :D");
+        humanScore++;
+    } else if (humanChoice==="paper" && computerChoice==="rock") {
+        console.log("Congratulations! You win :D");
+        humanScore++;
+    } else if (humanChoice==="paper" && computerChoice==="scissors") {
+        console.log("Computer wins :-o");
+        computerScore++;
+    } else if (humanChoice==="scissors" && computerChoice==="rock") {
+        console.log("Computer wins :-o");
+        computerScore++;
+    } else if (humanChoice==="scissors" && computerChoice==="paper") {
+        console.log("Congratulations! You win :D");
+        humanScore++;
+    }  else {
+        console.log("Please, enter a valid value.");
+    }
 }
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
