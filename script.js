@@ -1,5 +1,8 @@
 console.log("Hello Odin World!")
 
+/* Create a function to get the computer choice.
+Computer choice will have the same probability to 
+get whatever of the three options */
 function getComputerChoice() {
     let result=Math.random().toPrecision(2);
     if (result>=0 && result<0.34) {
@@ -12,6 +15,9 @@ function getComputerChoice() {
     return result
 }
 
+/* Then, create a function to get the human choice.
+A prompt will appear in the page, then the user should 
+write its answer */
 function getHumanChoice() {
     let humanChoice = prompt("Please, enter your choice: select between \"rock\", \"paper\" or \"scissors\".");
     humanChoice=humanChoice.toLowerCase();
