@@ -5,14 +5,18 @@ Computer choice will have the same probability to
 get whatever of the three options */
 function getComputerChoice() {
     let computerChoice=Math.random().toPrecision(2);
+    let result;
     if (computerChoice>=0 && computerChoice<0.34) {
-        console.log("rock")
+        result="rock";
+        console.log("rock");
     } else if (computerChoice>=0.34 && computerChoice<0.67) {
-        console.log("paper")
+        result="paper";
+        console.log("paper");
     } else {
-        console.log("scissors")
+        result="scissors";
+        console.log("scissors");
     }
-    return computerChoice
+    return result;
 }
 
 /* Then, create a function to get the human choice.
