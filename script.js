@@ -11,3 +11,7 @@ function getComputerChoice() {
     }
     return result
 }
+
+function getHumanChoice() {
+    prompt("Please, enter your choice: select between \"rock\", \"paper\" or \"scissors\".")
+}
