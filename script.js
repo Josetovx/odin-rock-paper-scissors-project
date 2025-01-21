@@ -32,3 +32,8 @@ function getHumanChoice() {
     }
     return humanChoice
 }
+
+/* Create two new variables for the score,
+in order to keep track of the players score */
+let humanScrore=0
+let computerScore=0
