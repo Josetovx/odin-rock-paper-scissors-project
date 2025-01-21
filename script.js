@@ -13,5 +13,16 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    prompt("Please, enter your choice: select between \"rock\", \"paper\" or \"scissors\".")
+    let humanChoice = prompt("Please, enter your choice: select between \"rock\", \"paper\" or \"scissors\".");
+    humanChoice=humanChoice.toLowerCase();
+    if (humanChoice==="rock") {
+        console.log("rock");
+    } else if (humanChoice==="paper") {
+        console.log("paper");
+    } else if (humanChoice==="scissors") {
+        console.log("scissors");
+    } else {
+        console.log("Invalid intput.")
+    }
+    return humanChoice
 }
