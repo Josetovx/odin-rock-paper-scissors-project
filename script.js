@@ -78,10 +78,10 @@ playRound(humanSelection, computerSelection);
 /* Create a function to play 5 rounds and finally
 declares the winner of the game. */
 function playGame() {
-    humanScore=0;
-    computerScore=0;
     for (let i=0; i<5; i++) {
-        playRound(humanSelection, computerSelection)
+        const humanSelection = getHumanChoice();
+        const computerSelection = getComputerChoice();
+        playRound(humanSelection, computerSelection);
     }
     if (humanScore>computerScore) {
         console.log("You have won the full game.")
