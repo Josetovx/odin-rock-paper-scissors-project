@@ -78,7 +78,7 @@ playRound(humanSelection, computerSelection);
 /* Create a function to play 5 rounds and finally
 declares the winner of the game. */
 function playGame() {
-    for (let i=0; i<5; i++) {
+    for (let i=0; i<4; i++) {
         const humanSelection = getHumanChoice();
         const computerSelection = getComputerChoice();
         playRound(humanSelection, computerSelection);
