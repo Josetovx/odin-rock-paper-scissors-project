@@ -66,7 +66,9 @@ function playRound(humanChoice, computerChoice) {
         console.log("Congratulations! You win :D");
         humanScore++;
     }  else {
-        console.log("Please, enter a valid value.");
+        alert("Please, enter a valid value.");
+        humanChoice=getHumanChoice();
+        playRound(humanChoice, computerChoice);
     }
 }
 
@@ -84,11 +86,11 @@ function playGame() {
         playRound(humanSelection, computerSelection);
     }
     if (humanScore>computerScore) {
-        console.log("You have won the full game.")
+        alert("You have won the full game.")
     } else if (computerScore>humanScore) {
-        console.log("Computer has won the full game.")
+        alert("Computer has won the full game.")
     } else {
-        console.log("Stalemate!")
+        alert("Stalemate!")
     }
 }
 
